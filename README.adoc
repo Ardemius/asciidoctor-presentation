@@ -1,0 +1,3 @@
+= asciidoctor-presentation
+
+A repo containing all the sources and doc for my presentation of AsciiDoctor and its backends.

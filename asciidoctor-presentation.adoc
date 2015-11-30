@@ -1,0 +1,112 @@
+= AsciiDoctor
+One document type to handle them all! (documents, blogs, slides, books, etc.)
+:icons: font
+// check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
+:toc: macro
+:imagesdir: images
+:source-highlighter: highlightjs
+// the following attributes are specific to the DZSlides backend
+:backend: dzslides
+:dzslides-style: stormy
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+:dzslides-highlight: monokai
+
+toc::[]
+
+== What's AsciiDoctor?
+
+[quote, asciidoctor.org]
+____
+Asciidoctor is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other formats
+____
+
+As suggested by this quote, it is important to distinguish *AsciiDoc* and *AsciiDoctor*:
+
+* icon:file-text[] AsciiDoc = *lightweigh language*, the "syntax" part
+* icon:wrench[] AsciiDoctor = parser + tools
+
+*AsciiDoc* was created in 2002 by Stuart Rackham, and is written in *Python*. +
+*AsciiDoctor* was initiated in 2012 by Ryan Waldron and Nick Hengeveld, is currently led by Dan Allen and Sarah White, and is written in *Ruby*.
+
+== Lightweigh languages
+
+As said above, AsciiDoc belongs to the category of the *lightweigh markup languages* (LML). +
+As the name implies, those last are *markup* languages, but are intended to be *far less complex and verbose* than HTML and especially XML. +
+It is designed to be easy to create with any generic text editor, as well as easy to read in its raw form.
+
+Generally used in *wiki*, we now also find them in common Web tools like *GitHub*, *Jira*, *Redmine*, etc. +
+Once the raw format saved, all those tools convert it into HTML for display in the browser.
+
+To my mind, most popular LMLs currently are Markdown and AsciiDoc(tor).
+
+Here is a https://en.wikipedia.org/wiki/Lightweight_markup_language[comparison of the principal ones].
+
+== AsciiDoc(tor) syntax
+
+NOTE: AsciiDoc**tor** extends AsciiDoc syntax, adding some features not natively present.
+
+You will find everything you want in the 2 following resources:
+
+* http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[the AsciiDoc Syntax Quick Reference]
+* http://asciidoctor.org/docs/user-manual/[the User Manual]
+
+Those 2 resouces are really *awesomely well done*, do not hesite to abuse it!
+
+Here is just a small example of the syntax:
+
+image::asciidoctor_example.PNG[]
+
+[TIP] 
+====
+Asciidoctor can “draw” icons using http://fortawesome.github.io/Font-Awesome/[Font Awesome] and CSS, which is just a kick-ass feature! +
+Some examples: icon:tags[] icon:car[] icon:cloud-upload[] icon:heartbeat[] icon:fire[]
+====
+
+== AsciiDoctor in GitHub
+
+GitHub *natively* supports AsciiDoctor, meaning you have *nothing* to install on your local desktop emoji:wink[2x]
+
+Just a have a look at some `.adoc` in repos to get some examples, like `README.adoc` or some GitHub wikis. +
+As an example, here are some of mines:
+
+* https://github.com/Ardemius/devoxx-france-2015-presentation/blob/master/a-world-where-1ms-is-worth-100ME.adoc
+* https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips
+
+== AsciiDoctor in Chrome
+
+Using the extension https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor.js Live Preview], *AsciiDoc documents can be rendered as HTML directly in Chrome*, without a prior transformation on your desktop (meaning you don't even need to install AsciiDoctor on your Desktop). +
+For your information, this extension uses the `asciidoctor.js` script to perform its rendering.
+
+[IMPORTANT]
+====
+Be sure to have a look to https://github.com/asciidoctor/asciidoctor-chrome-extension[the extension GitHub repo], and its documentation. +
+It warns you about common troubleshooting as the `Allow access to file URLs` option, or the correct way to display a table of content.
+
+image::Asciidoctor.js-live-preview_configuration.PNG[title="Do NOT forget the \"Allow access to file URLs option\""]
+====
+
+== AsciiDoc highlighting for Sublime Text
+
+To add *syntax highlighting* and *snippets* for AsciiDoc to Sublime Text, just follow the instructions at https://github.com/SublimeText/AsciiDoc.
+
+Here is an example of rendering:
+
+image::asciidoc-support-in-sublime-text.PNG[]
+
+== AsciiDoctor and its backends: ONE TOOL TO RENDER THEM ALL!!!!
+
+Here comes the big part, the one where the magic happens emoji:triumph[2x]
+
+From this point, you will have to install AsciiDoctor and its backends on your local desktop. +
+First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
+
+=== HTML rendering
+
+=== Slides rendering
+
+== Resources
+
+* http://asciidoctor.org/[AsciiDoctor Official site]
+* http://www.methods.co.nz/asciidoc/index.html[AsciiDoc Official Site]
+* My own tips! https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips

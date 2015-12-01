@@ -73,6 +73,28 @@ As an example, here are some of mines:
 * https://github.com/Ardemius/devoxx-france-2015-presentation/blob/master/a-world-where-1ms-is-worth-100ME.adoc
 * https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips
 
+== HubPress: AsciiDoc based blog using GitHub Pages
+
+http://hubpress.io/[HubPress] is a free, open source tool you can use to build a rich, *AsciiDoc based blog using GitHub Pages*.
+
+*Everything can be done through its web interface*, meaning you don't have to install AsciiDoctor on your local desktop. +
+Instead of using the HubPress editor, you can also write the raw document on your desktop, and push it to the backing GitHub repo.
+
+The *installation instructions* are rather simple and can be found, with the *documentation*, on the https://github.com/HubPress/hubpress.io[HubPress GitHub Repo].
+
+Examples:
+
+* the official HubPress blog[http://blog.hubpress.io/]
+* https://ardemius.github.io/[my own blog]
+
+== AsciiDoc highlighting for Sublime Text
+
+To add *syntax highlighting* and *snippets* for AsciiDoc to Sublime Text, just follow the instructions at https://github.com/SublimeText/AsciiDoc.
+
+Here is an example of rendering:
+
+image::asciidoc-support-in-sublime-text.PNG[]
+
 == AsciiDoctor in Chrome
 
 Using the extension https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor.js Live Preview], *AsciiDoc documents can be rendered as HTML directly in Chrome*, without a prior transformation on your desktop (meaning you don't even need to install AsciiDoctor on your Desktop). +
@@ -86,14 +108,6 @@ It warns you about common troubleshooting as the `Allow access to file URLs` opt
 image::Asciidoctor.js-live-preview_configuration.PNG[title="Do NOT forget the \"Allow access to file URLs option\""]
 ====
 
-== AsciiDoc highlighting for Sublime Text
-
-To add *syntax highlighting* and *snippets* for AsciiDoc to Sublime Text, just follow the instructions at https://github.com/SublimeText/AsciiDoc.
-
-Here is an example of rendering:
-
-image::asciidoc-support-in-sublime-text.PNG[]
-
 == AsciiDoctor and its backends: ONE TOOL TO RENDER THEM ALL!!!!
 
 Here comes the big part, the one where the magic happens emoji:triumph[2x]
@@ -101,9 +115,20 @@ Here comes the big part, the one where the magic happens emoji:triumph[2x]
 From this point, you will have to install AsciiDoctor and its backends on your local desktop. +
 First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
 
-=== HTML rendering
+AsciiDoctor has 4 native backends: `html5`, `xhtml5`, `docbook` and `docbook45`. +
+Several others exist (`deck.js`, `DZSlides`), that require a complementary install, check https://github.com/asciidoctor/asciidoctor-backends.
+
+=== HTML5 rendering
+
+The HTML rendering doesn't need any backend, 
 
 === Slides rendering
+
+qsdf
+
+=== Book rendering
+
+qdsf
 
 == Resources
 

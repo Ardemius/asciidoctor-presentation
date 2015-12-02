@@ -1,5 +1,5 @@
 = AsciiDoctor
-One document type to handle them all! (documents, blogs, slides, books, etc.)
+By Thomas SCHWENDER
 :icons: font
 // check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
 :toc: macro
@@ -11,6 +11,8 @@ One document type to handle them all! (documents, blogs, slides, books, etc.)
 :dzslides-transition: fade
 :dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
 :dzslides-highlight: monokai
+
+One document type to handle them all! (documents, blogs, slides, books, etc.)
 
 toc::[]
 
@@ -84,7 +86,7 @@ The *installation instructions* are rather simple and can be found, with the *do
 
 Examples:
 
-* the official HubPress blog[http://blog.hubpress.io/]
+* http://blog.hubpress.io/[the official HubPress blog]
 * https://ardemius.github.io/[my own blog]
 
 == AsciiDoc highlighting for Sublime Text
@@ -153,6 +155,11 @@ Once done, the render command is the following:
 ----
 asciidoctor -T </path/to/asciidoctor-backends> -E slim </path/to/asciidoctor-document>
 ----
+
+[TIP]
+====
+To know what http://asciidoctor.org/docs/user-manual/#role[`role`] are available for DZSlides, have a look at: https://github.com/mojavelinux/dzslides/blob/master/themes/style/asciidoctor.css
+====
 
 Examples of rendering:
 

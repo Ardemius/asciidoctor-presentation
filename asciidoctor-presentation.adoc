@@ -116,21 +116,51 @@ From this point, you will have to install AsciiDoctor and its backends on your l
 First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
 
 AsciiDoctor has 4 native backends: `html5`, `xhtml5`, `docbook` and `docbook45`. +
-Several others exist (`deck.js`, `DZSlides`), that require a complementary install, check https://github.com/asciidoctor/asciidoctor-backends.
+Several others exist (`deck.js`, `DZSlides`), that require a complementary install, check https://github.com/asciidoctor/asciidoctor-backends for more details.
+
+To know how to render a document, check this link http://asciidoctor.org/docs/render-documents/
 
 === HTML5 rendering
 
-The HTML rendering doesn't need any backend, 
+In the directory that contains your .adoc document, just run:
 
-=== Slides rendering
+[source,asciidoctor]
+----
+asciidoctor mysample.adoc
+----
 
-qsdf
+=== DocBook rendering
 
-=== Book rendering
+In the directory that contains your .adoc document, just run:
 
-qdsf
+[source,asciidoctor]
+----
+asciidoctor -b docbook mysample.adoc
+----
 
-== Resources
+=== Slides rendering with DZSlides
+
+As DZSlides is not a native backend, it requires a complementary install, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
+
+The 2 main parts of additional backends are:
+
+* the *template directory*: required for the transformation of the .adoc into an HTML document
+* the *presentation library*: required for the rendering of the final HTML document
+
+Once done, the render command is the following:
+
+[source,asciidoctor]
+----
+asciidoctor -T </path/to/asciidoctor-backends> -E slim </path/to/asciidoctor-document>
+----
+
+Examples of rendering:
+
+* http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
+* http://mojavelinux.github.io/decks/asciidoc-with-pleasure/rwx2012/index.html (https://github.com/mojavelinux/decks/tree/master/asciidoc-with-pleasure[source])
+* http://docs.jboss.org/cdi/learn/introduction/slides.html (https://github.com/antoinesd/Introduction-to-CDI[source])
+
+== Some resources
 
 * http://asciidoctor.org/[AsciiDoctor Official site]
 * http://www.methods.co.nz/asciidoc/index.html[AsciiDoc Official Site]

@@ -12,6 +12,7 @@ By Thomas SCHWENDER
 :dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
 :dzslides-highlight: monokai
 
+// No preamble, and so, no table of contents accepted in DZSlides. Put in comments the following lines if generating slides with this backend
 One document type to handle them all! (documents, blogs, slides, books, etc.)
 
 toc::[]
@@ -57,7 +58,7 @@ Those 2 resouces are really *awesomely well done*, do not hesite to abuse it!
 
 Here is just a small example of the syntax:
 
-image::asciidoctor_example.PNG[]
+image::asciidoctor_example.PNG[title="AsciiDoc syntax example"]
 
 [TIP] 
 ====
@@ -95,7 +96,7 @@ To add *syntax highlighting* and *snippets* for AsciiDoc to Sublime Text, just f
 
 Here is an example of rendering:
 
-image::asciidoc-support-in-sublime-text.PNG[]
+image::asciidoc-support-in-sublime-text.PNG[title="AsciiDoc highlighting in Sublime Text"]
 
 == AsciiDoctor in Chrome
 

@@ -58,7 +58,7 @@ Those 2 resouces are really *awesomely well done*, do not hesite to abuse it!
 
 Here is just a small example of the syntax:
 
-image::asciidoctor_example.PNG[title="AsciiDoc syntax example"]
+image::asciidoctor_example.png[title="AsciiDoc syntax example"]
 
 [TIP] 
 ====

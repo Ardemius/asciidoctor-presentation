@@ -98,6 +98,11 @@ Here is an example of rendering:
 
 image::asciidoc-support-in-sublime-text.PNG[title="AsciiDoc highlighting in Sublime Text"]
 
+[NOTE]
+====
+From the original repo https://github.com/mrchief/AsciiDoc.SublimeText2, your learn that the AsciiDoctor syntax highlighting works best in Sublime Text with theme *Sunburst* or *Twilight*.
+====
+
 == AsciiDoctor in Chrome
 
 Using the extension https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor.js Live Preview], *AsciiDoc documents can be rendered as HTML directly in Chrome*, without a prior transformation on your desktop (meaning you don't even need to install AsciiDoctor on your Desktop). +

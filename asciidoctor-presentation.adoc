@@ -177,4 +177,5 @@ Examples of rendering:
 
 * http://asciidoctor.org/[AsciiDoctor Official site]
 * http://www.methods.co.nz/asciidoc/index.html[AsciiDoc Official Site]
+* Excellent https://leanpub.com/awesomeasciidoctornotebook/read[Awesome AsciiDoctor Notebook] by https://leanpub.com/u/mrhaki[Hubert A. Klein Ikkink (mrhaki)]
 * My own tips! https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips

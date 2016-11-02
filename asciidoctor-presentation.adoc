@@ -169,9 +169,20 @@ To know what http://asciidoctor.org/docs/user-manual/#role[`role`] are available
 
 Examples of rendering:
 
-* http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
 * http://mojavelinux.github.io/decks/asciidoc-with-pleasure/rwx2012/index.html (https://github.com/mojavelinux/decks/tree/master/asciidoc-with-pleasure[source])
 * http://docs.jboss.org/cdi/learn/introduction/slides.html (https://github.com/antoinesd/Introduction-to-CDI[source])
+
+=== Slides rendering with reveal.js
+
+Examples of rendering:
+
+* http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
+
+=== Slides rendering with Deck.js
+
+Examples of rendering:
+
+* https://github.com/Ardemius/enhanced-jenkins_slides-asciidoctor-deckjs[my POC of Asciidoctor / Deck.js slides for Devoxx France *Enhanced Jenkins* talk]
 
 == Some resources
 

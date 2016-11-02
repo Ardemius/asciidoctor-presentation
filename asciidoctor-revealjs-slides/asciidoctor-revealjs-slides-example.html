@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Title Slide</title><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"><link href="reveal.js/css/reveal.css" rel="stylesheet"><link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet"><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><link rel="stylesheet" href="styles/myCustomCSS.css"></head><body><div class="reveal"><div class="slides"><section class="title"><h1>Title Slide</h1></section><section id="_slide_one"><h2>Slide One</h2><div class="ulist"><ul><li><p>Foo</p></li><li><p>Bar</p></li><li><p>World</p></li></ul></div></section>
+<section id="_slide_two"><h2>Slide Two</h2><div class="paragraph"><p>Hello World - Good Bye Cruel World</p></div>
+<aside class="notes"><div class="paragraph"><p>Actually things aren&#8217;t that bad</p></div></aside></section>
+<section id="_slide_three" data-background-color="yellow"><h2>Slide Three</h2><div class="paragraph"><p>Is very yellow</p></div></section>
+<section id="_grand_announcement" data-background-image="images/mountain-cover.jpg" data-background-size="cover"></section>
+<section id="_the_great_goat" data-background-image="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg" data-background-size="contain"></section>
+<section id="_nice_background" data-background-video="https://my.video/file.mp4" data-background-video-loop data-background-video-muted><h2>Nice background!</h2></section>
+<section id="_nice_background_2" data-background-video="https://my.video/file.mp4" data-background-video-loop data-background-video-muted><h2>Nice background!</h2></section>
+<section id="_zoom_zoom" data-transition="zoom"><h2>Zoom zoom</h2><div class="paragraph"><p>This slide will override the presentation transition and zoom!</p></div></section>
+<section id="_speed" data-transition-speed="fast"><h2>Speed</h2><div class="paragraph"><p>Choose from three transition speeds: default, fast or slow!</p></div></section>
+<section id="_slide_four"><h2>Slide Four</h2><div class="ulist"><ul><li class="fragment"><p>this</p></li><li class="fragment"><p>is</p></li><li class="fragment"><p>revealed</p></li><li class="fragment"><p>gradually</p></li></ul></div></section>
+<section id="_trains_we_love_trains"><h2>Trains, we love trains!</h2><div class="videoblock stretch"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/kZH9JtPBq7k?rel=0&amp;start=34" frameborder="0" allowfullscreen data-autoplay></iframe></div></section>
+<section id="_slide_five"><h2>Slide Five</h2><div class="paragraph"><p>Uses highlighted code</p></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code>print "Hello World"</code></pre></div></div></section>
+<section id="_slide_five_2"><h2>Slide Five</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="perl language-perl">print "$0: hello world\n"</code></pre></div></div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="java language-java">import java.util.Date;
+class DateApp {
+    public static void main(String args[]) {
+        Date today = new Date();
+        System.out.println(today);
+    }
+}</code></pre></div></div></section>
+<section><section id="_slide_six"><h2>Slide Six</h2><div class="paragraph"><p>Top slide</p></div></section><section id="_slide_six_one"><h2>Slide Six.One</h2><div class="paragraph"><p>This is a vertical subslide</p></div></section></section>
+<section><section id="_main_section"><h2>Main section</h2></section><section id="_sub_section"><h2>Sub Section</h2><div class="paragraph"><p>Small<br>
+Multiline<br>
+intro</p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>very</p></li><li><p>long</p></li><li><p>list</p></li><li><p>of</p></li><li><p>items</p></li></ol></div></section><section><div class="paragraph"><p>Some overview diagram</p></div></section><section><div class="paragraph"><p>Detailed view diagram</p></div></section></section>
+<section id="_slide_fragments"><h2>Slide Fragments</h2><section>
+    <p class="fragment" data-fragment-index="3">Appears last</p>
+    <p class="fragment" data-fragment-index="1">Appears first</p>
+    <p class="fragment" data-fragment-index="2">Appears second</p>
+</section></section>
+<section id="_slide_using_icons"><h2>Slide using icons</h2><div class="paragraph"><p>As usual with Asciidoctor:
+<span class="icon"><i class="fa fa-eye"></i></span> / <span class="icon"><i class="fa fa-keyboard-o"></i></span> / <span class="icon"><i class="fa fa-git"></i></span></p></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: false,
+  // Push each slide change to the browser history
+  history: false,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'black',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'slide',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script></body></html>

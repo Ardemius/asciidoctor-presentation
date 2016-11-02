@@ -1,0 +1,21 @@
+/**
+ * Custom training CSS, to practise a bit the Reveal.js back-end of AsciiDoctor
+ *
+ */
+
+.reveal section.title h1 {
+    margin-top: 2.3em;
+}
+
+.reveal section.title small {
+    margin-top: 15.3em;
+    font-weight: bold;
+    color: white;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Baloo+Bhai';
+
+section[data-state="topic"] h2 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 4em;
+}

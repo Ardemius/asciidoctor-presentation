@@ -1,0 +1,155 @@
+= Title Slide
+// classic AsciiDoctor attributes
+:icons: font
+:imagesdir: images
+:customcss: styles/myCustomCSS.css
+// Despite the warning of the documentation, https://github.com/asciidoctor/asciidoctor-reveal.js, highlight.js syntax highlighting WORKS, BUT, you need to explicitly set the highlighter using the below attribute
+// see http://discuss.asciidoctor.org/Highlighting-source-code-for-reveal-js-backend-td2750.html
+:source-highlighter: highlightjs
+
+// Basic presentation with speaker notes
+== Slide One
+
+* Foo
+* Bar
+* World
+
+== Slide Two
+
+Hello World - Good Bye Cruel World
+
+[NOTE.speaker]
+--
+Actually things aren't that bad
+--
+
+// Background colors
+[background-color="yellow"]
+== Slide Three
+
+Is very yellow
+
+// Background images
+[%notitle]
+== Grand Announcement
+
+image::mountain-cover.jpg[background, size=cover]
+
+[%notitle]
+== The Great Goat
+
+image::https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg[canvas,size=contain]
+
+// Background videos
+[background-video="https://my.video/file.mp4",background-video-loop=true,background-video-muted=true]
+== Nice background!
+
+[background-video="https://my.video/file.mp4",options="loop,muted"]
+== Nice background!
+
+// Background iframes
+//[%notitle,background-iframe="https://www.youtube.com/embed/LaApqL4QjH8?rel=0&start=3&enablejsapi=1&autoplay=1&loop=1&controls=0&modestbranding=1"]
+//== a youtube video
+
+// Slide Transitions
+[transition=zoom, %notitle]
+== Zoom zoom
+
+This slide will override the presentation transition and zoom!
+
+[transition-speed=fast, %notitle]
+== Speed
+
+Choose from three transition speeds: default, fast or slow!
+
+// Fragments
+== Slide Four
+
+[%step]
+* this
+* is
+* revealed
+* gradually
+
+// Videos
+== Trains, we love trains!
+
+video::kZH9JtPBq7k[youtube, start=34, options=autoplay]
+
+// Syntax highlighting
+== Slide Five
+
+Uses highlighted code
+
+----
+print "Hello World"
+----
+
+== Slide Five
+
+[source,perl]
+----
+print "$0: hello world\n"
+----
+
+[source,java]
+----
+import java.util.Date;
+class DateApp {
+    public static void main(String args[]) {
+        Date today = new Date();
+        System.out.println(today);
+    }
+}
+----
+
+// Vertical slides
+== Slide Six
+
+Top slide
+
+=== Slide Six.One
+
+This is a vertical subslide
+
+// Content meant for multiple back-ends. Requires the document to be compiled using back-end option "-b revealjs"
+== Main section
+
+=== Sub Section
+
+Small +
+Multiline +
+intro
+
+. very
+. long
+. list
+. of
+. items
+
+ifdef::backend-revealjs[=== !]
+
+Some overview diagram
+
+ifdef::backend-revealjs[=== !]
+
+Detailed view diagram
+
+// and now, my own test slides
+== Slide Fragments
+
+// we use passthrough block to use native data-fragment-index attribute from reveal.js, not currently supported by asciidoctor-revealjs
+++++
+<section>
+    <p class="fragment" data-fragment-index="3">Appears last</p>
+    <p class="fragment" data-fragment-index="1">Appears first</p>
+    <p class="fragment" data-fragment-index="2">Appears second</p>
+</section>
+++++
+
+== Slide using icons
+
+As usual with Asciidoctor:
+icon:eye[] / icon:keyboard-o[] / icon:git[]
+
+

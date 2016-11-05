@@ -188,7 +188,7 @@ Using *Bundler* proved to be a very convenient and efficient way to install the 
 ====
 . Step 4 of the install procedure, _"*Optional*: Copy or clone reveal.js presentation framework..."_, is *NOT* optional. +
 You have to retrieve the reveal.js presentation library to view your slides.
-. To use a syntax highlighting, you *have* to use the document attribute `:source-highlighter: highlightjs`. +
+. To use a *syntax highlighting*, you *have* to use the document attribute `:source-highlighter: highlightjs`. +
 See http://discuss.asciidoctor.org/Highlighting-source-code-for-reveal-js-backend-td2750.html
 ====
 

@@ -136,7 +136,7 @@ ifdef::backend-revealjs[=== !]
 Detailed view diagram
 
 // and now, my own test slides
-== Slide Fragments
+== Slide Fragments using raw HTML / reveal.js
 
 // we use passthrough block to use native data-fragment-index attribute from reveal.js, not currently supported by asciidoctor-revealjs
 ++++
@@ -145,6 +145,22 @@ Detailed view diagram
     <p class="fragment" data-fragment-index="1">Appears first</p>
     <p class="fragment" data-fragment-index="2">Appears second</p>
 </section>
+++++
+
+== Table and tableblock class with raw HTML / reveal.js
+
+++++
+<table class="tableblock emblems">
+	<tbody>
+		<tr>
+			<td class="tableblock"><p class="tableblock fragment visible" data-fragment-index="0"> <span class="icon"><i class="fa fa-eye"></i></span><span>read</span></p></td> 
+			<td class="tableblock"><p class="tableblock fragment visible" data-fragment-index="1"><span class="icon"><i class="fa fa-keyboard-o"></i></span><span>edit</span></p></td>
+			<td class="tableblock"><p class="tableblock fragment visible" data-fragment-index="2"><span class="icon"><i class="fa fa-git"></i></span><span>version</span></p></td>
+			<td class="tableblock"><p class="tableblock fragment visible current-fragment" data-fragment-index="3"><span class="icon"><i class="fa fa-share-square-o"></i></span><span>share</span></p></td>
+			<td class="tableblock"><p class="tableblock fragment" data-fragment-index="4"><span class="icon"><i class="fa fa-flask"></i></span><span>convert</span></p></td>
+		</tr>
+	</tbody>
+</table>
 ++++
 
 == Slide using icons

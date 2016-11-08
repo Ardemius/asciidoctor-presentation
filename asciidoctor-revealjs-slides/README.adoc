@@ -1,0 +1,30 @@
+= Asciidoctor / reveal.js slides example
+
+The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc[asciidoctor-presentation.adoc] can be *viewed online* using the http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*GitHub pages* of the project].
+
+As https://github.com/hakimel/reveal.js[reveal.js] is present as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
+
+* either to use the `--recursive` option of the `clone` command: +
+----
+git clone --recursive https://github.com/Ardemius/asciidoctor-presentation
+----
+* or: +
+----
+git clone https://github.com/Ardemius/asciidoctor-presentation
+git submodule init
+git submodule update --recursive
+----
+* or even: +
+----
+git clone https://github.com/Ardemius/asciidoctor-presentation
+git submodule update --init --recursive
+----
+
+[NOTE]
+====
+For more info on how to retrieve the content of submodules, see:
+
+* http://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
+* http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag
+====
+

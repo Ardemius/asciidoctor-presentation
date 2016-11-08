@@ -192,6 +192,20 @@ You have to retrieve the reveal.js presentation library to view your slides.
 See http://discuss.asciidoctor.org/Highlighting-source-code-for-reveal-js-backend-td2750.html
 ====
 
+Once done, the render command is the following (using bundler):
+
+[source,asciidoctor]
+----
+bundle exec asciidoctor-revealjs </path/to/asciidoctor-document>
+----
+
+If you want to precise an *output directory* and a *specific filename*, you can use:
+
+[source,asciidoctor]
+----
+bundle exec asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
+----
+
 Examples of rendering:
 
 * http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])

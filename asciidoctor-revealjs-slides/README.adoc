@@ -22,10 +22,18 @@ git submodule update --init --recursive
 
 [NOTE]
 ====
-For more info on submodules, and how to retrieve their content, see:
+For more info on how to retrieve the content of submodules, see:
 
-* http://www.git-attitude.fr/2014/12/31/git-submodules/
 * http://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
 * http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag
 ====
 
+== Generating the slides
+
+The whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#slides-rendering-with-revealjs[main doc of the repo]. +
+But, as a reminder, here is just the final command:
+
+[source,asciidoctor]
+----
+bundle exec asciidoctor-revealjs </path/to/asciidoctor-document>
+----

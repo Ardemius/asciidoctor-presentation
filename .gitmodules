@@ -1,0 +1,3 @@
+[submodule "asciidoctor-revealjs-slides/reveal.js"]
+	path = asciidoctor-revealjs-slides/reveal.js
+	url = https://github.com/hakimel/reveal.js.git

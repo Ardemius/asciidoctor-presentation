@@ -159,7 +159,7 @@ asciidoctor -b docbook mysample.adoc
 
 === Slides rendering with DZSlides
 
-As DZSlides is not a native backend, it requires a complementary install, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
+As DZSlides is not a native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
 
 The 2 main parts of additional backends are:
 
@@ -185,7 +185,7 @@ Examples of rendering:
 
 === Slides rendering with reveal.js
 
-Again, as a not native backend, it requires a complementary install, which is described here https://github.com/asciidoctor/asciidoctor-reveal.js#install. +
+Again, as a not native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-reveal.js#revealjs-backend-for-asciidoctor. +
 Using *Bundler* proved to be a very convenient and efficient way to install the Asciidoctor / reveal.js stack for a projet.
 
 [WARNING]

@@ -28,9 +28,14 @@ For more info on how to retrieve the content of submodules, see:
 * http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag
 ====
 
-== Generating the slides
+== Installation of Asciidoctor and its reveal.js backend
 
-The whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#slides-rendering-with-revealjs[main doc of the repo]. +
+Everything is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#installation-instructions[main doc of the repo]. +
+In my case, I choose to install http://jruby.org/[*JRuby*] and the https://github.com/asciidoctor/asciidoctor-reveal.js#ruby-setup[*Bundler* stack].
+
+== Generation of the slides
+
+Again, the whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#slides-rendering-with-revealjs[main doc of the repo]. +
 But, as a reminder, here is just the final command:
 
 [source,asciidoctor]

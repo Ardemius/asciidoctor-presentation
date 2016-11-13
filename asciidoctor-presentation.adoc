@@ -5,6 +5,8 @@ By Thomas SCHWENDER
 :toc: macro
 :imagesdir: images
 :source-highlighter: highlightjs
+// to activate UI macros (such as displaying the keys of the keyboard)
+:experimental:
 // the following attributes are specific to the DZSlides backend
 :backend: dzslides
 :dzslides-style: stormy
@@ -120,7 +122,9 @@ image::Asciidoctor.js-live-preview_configuration.PNG[title="Do NOT forget the \"
 
 Here comes the big part, the one where the magic happens emoji:triumph[2x]
 
-From this point, you will have to install AsciiDoctor and its backends on your local desktop. +
+=== Installation instructions
+
+From this point, you will have to *install AsciiDoctor and its backends* on your local desktop. +
 First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
 
 [NOTE]
@@ -209,6 +213,34 @@ bundle exec asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/ou
 Examples of rendering:
 
 * http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
+* http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[My own example slides, based on the reveal.js doc] (https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.adoc[source])
+
+==== Keyboard shortcuts
+
+Several *keyboard shortcuts* are available in the browser while viewing reveal.js slides:
+
+[cols="1,3", options="header"]
+|===
+|Shortcut |Purpose
+
+|kbd:[Up], kbd:[Down], kbd:[Left], kbd:[Right]
+|Navigation
+
+|kbd:[f]
+|Full-screen
+
+|kbd:[s]
+|Show speaker notes interface (open a separate browser window)
+
+|kbd:[o]
+|Toggle overview
+
+|kbd:[b], kbd:[.]
+|Turn screen black
+
+|kbd:[Alt+click]
+|Zoom in and out
+|===
 
 === Slides rendering with Deck.js
 

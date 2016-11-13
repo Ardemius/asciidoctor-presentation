@@ -213,7 +213,7 @@ bundle exec asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/ou
 Examples of rendering:
 
 * http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
-* http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[My own example slides, based on the reveal.js doc] (https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.adoc[source])
+* http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[My own example slides, based on the reveal.js doc] (https://github.com/Ardemius/asciidoctor-presentation/tree/master/asciidoctor-revealjs-slides[source])
 
 ==== Keyboard shortcuts
 

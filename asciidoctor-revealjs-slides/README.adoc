@@ -1,4 +1,6 @@
 = Asciidoctor / reveal.js slides example
+:icons: font
+:source-highlighter: highlightjs
 
 The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc[asciidoctor-presentation.adoc] can be *viewed online* using the http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*GitHub pages* of the project].
 
@@ -32,6 +34,51 @@ For more info on how to retrieve the content of submodules, see:
 
 Everything is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#installation-instructions[main doc of the repo]. +
 In my case, I choose to install http://jruby.org/[*JRuby*] and the https://github.com/asciidoctor/asciidoctor-reveal.js#ruby-setup[*Bundler* stack].
+
+=== No-brainer JRuby / Bundler install
+
+Just as a convenience, here is a no-brainer install procedure for *Asciidoctor* / *reveal.js* backend using *JRuby* and *Bundler* :
+
+. Install *JRuby*
+.. Download https://s3.amazonaws.com/jruby.org/downloads/1.7.26/jruby-bin-1.7.26.zip[JRuby 1.7.xx as a zip]
+.. Uncompress it at some path
+.. Add `<install_folder>\jruby-1.7.xx\bin` to your `PATH` environment variable
+. Install *Bundler*
+.. In a command windows, run:
++
+[source,bash]
+----
+$ gem install bundler
+----
+. Install of the *Asciidoctor / reveal.js stack*
+.. Create a folder for your slides project
+.. In that folder, create a file named `Gemfile` with the following content:
++
+----
+source 'https://rubygems.org'
+
+gem 'asciidoctor-revealjs' # latest released version
+#gem 'asciidoctor-revealjs', github: 'asciidoctor/asciidoctor-reveal.js' # github master branch
+----	
+.. Install the gems into the project
++
+[source,bash]
+----
+$ bundle config --local github.https true
+$ bundle --path=.bundle/gems --binstubs=.bundle/.bin
+----
+.. Copy or clone *reveal.js presentation framework*
++
+[source,bash]
+----
+$ git clone -b 3.3.0 --depth 1 https://github.com/hakimel/reveal.js.git
+----
++
+[WARNING]
+====
+If you *already retrieved* the *reveal.js folder* (see the https://github.com/Ardemius/asciidoctor-presentation/tree/master/asciidoctor-revealjs-slides#asciidoctor--revealjs-slides-example[submodule details at the beginning of the document]), *bypass* this step.
+====
+. That's it! emoji:ok_hand[2x]
 
 == Generation of the slides
 

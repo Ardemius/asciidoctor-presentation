@@ -127,9 +127,12 @@ intro
 . of
 . items
 
+// the following conditional "if" require the doc to be compiled with the back-end option: "-b revealjs"
+// the "=== !" acts as a breaking point
 ifdef::backend-revealjs[=== !]
 
-Some overview diagram
+Some overview diagram +
+A breaking point `=== !` was used to display it in a single slide.
 
 ifdef::backend-revealjs[=== !]
 
@@ -167,5 +170,35 @@ Detailed view diagram
 
 As usual with Asciidoctor:
 icon:eye[] / icon:keyboard-o[] / icon:git[]
+
+== Images positioning
+
+=== Inline image float left
+
+Just some text before the image +
+image:mountain-cover.jpg[Mountain,150,150,float="left"]
+And here is some text after the image
+
+=== Inline image float right
+
+Just some text before the image +
+image:mountain-cover.jpg[Mountain,150,150,float="right"]
+And here is some text after the image
+
+=== Inline image float center
+
+Just some text before the image +
+image:mountain-cover.jpg[Mountain,150,150,float="center"]
+And here is some text after the image
+
+=== block image float left, align center
+
+Just some text before the image
+
+image::mountain-cover.jpg[Tiger,400,200,float="left",align="center"]
+
+And here is some text after the image
+
+
 
 

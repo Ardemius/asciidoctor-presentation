@@ -3,6 +3,19 @@
  *
  */
 
+/* a class selector, to custom some given text using the syntax "[CYAN]#some text#" */
+.CYAN {
+    color: cyan;
+}
+
+.myOrange {
+    color: #FF6A00;
+}
+
+.reveal strong,
+.reveal b {
+  color: #FF6A00; }
+
 .reveal section.title h1 {
     margin-top: 2.3em;
 }

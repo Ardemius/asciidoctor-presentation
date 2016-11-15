@@ -10,9 +10,13 @@
 // Basic presentation with speaker notes
 == Slide One
 
-* Foo
-* Bar
-* World
+Some list using colors:
+
+* *Foo*: color given by an overload of the CSS selectors `.reveal strong, .reveal b`
+* [CYAN]#Bar#: color given by the CSS selector `.CYAN` (check styles/myCustomCSS.css)
+* and an icon icon:tags[role="myOrange"] icon:beer[role="CYAN"]
+
+Be careful, styles loaded through `:customcss:` attribute will only be available in reveal.js slides (not in Asciidoctor HTML5 rendering)
 
 == Slide Two
 

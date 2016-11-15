@@ -8,7 +8,7 @@ toc::[]
 
 == Overview
 
-The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc[asciidoctor-presentation.adoc] can be *viewed online* using the http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*GitHub pages* of the project].
+The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc[asciidoctor-presentation.adoc] can be http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*viewed online here*], by using the *GitHub pages* of the project.
 
 As https://github.com/hakimel/reveal.js[reveal.js] is present as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
 

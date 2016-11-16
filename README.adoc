@@ -1,3 +1,256 @@
-= asciidoctor-presentation
+= AsciiDoctor presentation
+By Thomas SCHWENDER
+:icons: font
+// check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
+:toc: macro
+:imagesdir: images
+:source-highlighter: highlightjs
+// to activate UI macros (such as displaying the keys of the keyboard)
+:experimental:
+// the following attributes are specific to the DZSlides backend
+:backend: dzslides
+:dzslides-style: stormy
+:dzslides-transition: fade
+:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
+:dzslides-highlight: monokai
 
-A repo containing all the sources and doc for my presentation of AsciiDoctor and its backends.
+// No preamble, and so, no table of contents accepted in DZSlides. Put in comments the following lines if generating slides with this backend
+One document type to handle them all! (documents, blogs, slides, books, etc.)
+
+toc::[]
+
+== What's AsciiDoctor?
+
+[quote, asciidoctor.org]
+____
+Asciidoctor is a fast text processor and publishing toolchain for converting AsciiDoc content to HTML5, DocBook 5 (or 4.5) and other formats
+____
+
+As suggested by this quote, it is important to distinguish *AsciiDoc* and *AsciiDoctor*:
+
+* icon:file-text[] AsciiDoc = *lightweigh language*, the "syntax" part
+* icon:wrench[] AsciiDoctor = parser + tools
+
+*AsciiDoc* was created in 2002 by Stuart Rackham, and is written in *Python*. +
+*AsciiDoctor* was initiated in 2012 by Ryan Waldron and Nick Hengeveld, is currently led by Dan Allen and Sarah White, and is written in *Ruby*.
+
+== Lightweigh languages
+
+As said above, AsciiDoc belongs to the category of the *lightweigh markup languages* (LML). +
+As the name implies, those last are *markup* languages, but are intended to be *far less complex and verbose* than HTML and especially XML. +
+It is designed to be easy to create with any generic text editor, as well as easy to read in its raw form.
+
+Generally used in *wiki*, we now also find them in common Web tools like *GitHub*, *Jira*, *Redmine*, etc. +
+Once the raw format saved, all those tools convert it into HTML for display in the browser.
+
+To my mind, most popular LMLs currently are Markdown and AsciiDoc(tor).
+
+Here is a https://en.wikipedia.org/wiki/Lightweight_markup_language[comparison of the principal ones].
+
+== AsciiDoc(tor) syntax
+
+NOTE: AsciiDoc**tor** extends AsciiDoc syntax, adding some features not natively present.
+
+You will find everything you want in the 2 following resources:
+
+* http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[the AsciiDoc Syntax Quick Reference]
+* http://asciidoctor.org/docs/user-manual/[the User Manual]
+
+Those 2 resouces are really *awesomely well done*, do not hesite to abuse it!
+
+Here is just a small example of the syntax:
+
+image::asciidoctor_example.png[title="AsciiDoc syntax example"]
+
+[TIP] 
+====
+Asciidoctor can “draw” icons using http://fortawesome.github.io/Font-Awesome/[Font Awesome] and CSS, which is just a kick-ass feature! +
+Some examples: icon:tags[] icon:car[] icon:cloud-upload[] icon:heartbeat[] icon:fire[]
+====
+
+== AsciiDoctor in GitHub
+
+GitHub *natively* supports AsciiDoctor, meaning you have *nothing* to install on your local desktop emoji:wink[2x]
+
+Just a have a look at some `.adoc` in repos to get some examples, like `README.adoc` or some GitHub wikis. +
+As an example, here are some of mines:
+
+* https://github.com/Ardemius/devoxx-france-2015-presentation/blob/master/a-world-where-1ms-is-worth-100ME.adoc
+* https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips
+
+== HubPress: AsciiDoc based blog using GitHub Pages
+
+http://hubpress.io/[HubPress] is a free, open source tool you can use to build a rich, *AsciiDoc based blog using GitHub Pages*.
+
+*Everything can be done through its web interface*, meaning you don't have to install AsciiDoctor on your local desktop. +
+Instead of using the HubPress editor, you can also write the raw document on your desktop, and push it to the backing GitHub repo.
+
+The *installation instructions* are rather simple and can be found, with the *documentation*, on the https://github.com/HubPress/hubpress.io[HubPress GitHub Repo].
+
+Examples:
+
+* http://blog.hubpress.io/[the official HubPress blog]
+* https://ardemius.github.io/[my own blog]
+
+== AsciiDoc highlighting for Sublime Text
+
+To add *syntax highlighting* and *snippets* for AsciiDoc to Sublime Text, just follow the instructions at https://github.com/SublimeText/AsciiDoc.
+
+Here is an example of rendering:
+
+image::asciidoc-support-in-sublime-text.PNG[title="AsciiDoc highlighting in Sublime Text"]
+
+[NOTE]
+====
+From the original repo https://github.com/mrchief/AsciiDoc.SublimeText2, you learn that the AsciiDoctor syntax highlighting works best in Sublime Text with theme *Sunburst* or *Twilight*.
+====
+
+== AsciiDoctor in Chrome
+
+Using the extension https://chrome.google.com/webstore/detail/asciidoctorjs-live-previe/iaalpfgpbocpdfblpnhhgllgbdbchmia[Asciidoctor.js Live Preview], *AsciiDoc documents can be rendered as HTML directly in Chrome*, without a prior transformation on your desktop (meaning you don't even need to install AsciiDoctor on your Desktop). +
+For your information, this extension uses the `asciidoctor.js` script to perform its rendering.
+
+[IMPORTANT]
+====
+Be sure to have a look to https://github.com/asciidoctor/asciidoctor-chrome-extension[the extension GitHub repo], and its documentation. +
+It warns you about common troubleshooting as the `Allow access to file URLs` option, or the correct way to display a table of content.
+
+image::Asciidoctor.js-live-preview_configuration.PNG[title="Do NOT forget the \"Allow access to file URLs option\""]
+====
+
+== AsciiDoctor and its backends: ONE TOOL TO RENDER THEM ALL!!!!
+
+Here comes the big part, the one where the magic happens emoji:triumph[2x]
+
+=== Installation instructions
+
+From this point, you will have to *install AsciiDoctor and its backends* on your local desktop. +
+First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
+
+[NOTE]
+====
+I became a big fan of http://jruby.org/[JRuby] as the Ruby implementation to use with Asciidoctor. +
+Easy to install, and to switch from a version to another (just by updating environment variables). +
+Just do not forget to use a 1.7.x JRuby version (02/11/2016)
+====
+
+AsciiDoctor has 4 native backends: `html5`, `xhtml5`, `docbook` and `docbook45`. +
+Several others exist (`deck.js`, `DZSlides`), that require a complementary install, check https://github.com/asciidoctor/asciidoctor-backends for more details.
+
+To know how to render a document, check this link http://asciidoctor.org/docs/render-documents/
+
+=== HTML5 rendering
+
+In the directory that contains your .adoc document, just run:
+
+[source,asciidoctor]
+----
+asciidoctor mysample.adoc
+----
+
+=== DocBook rendering
+
+In the directory that contains your .adoc document, just run:
+
+[source,asciidoctor]
+----
+asciidoctor -b docbook mysample.adoc
+----
+
+=== Slides rendering with DZSlides
+
+As DZSlides is not a native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
+
+The 2 main parts of additional backends are:
+
+* the *template directory*: required for the transformation of the .adoc into an HTML document
+* the *presentation library*: required for the rendering of the final HTML document
+
+Once done, the render command is the following:
+
+[source,asciidoctor]
+----
+asciidoctor -T </path/to/asciidoctor-backends> -E slim </path/to/asciidoctor-document>
+----
+
+[TIP]
+====
+To know what http://asciidoctor.org/docs/user-manual/#role[`role`] are available for DZSlides, have a look at: https://github.com/mojavelinux/dzslides/blob/master/themes/style/asciidoctor.css
+====
+
+Examples of rendering:
+
+* http://mojavelinux.github.io/decks/asciidoc-with-pleasure/rwx2012/index.html (https://github.com/mojavelinux/decks/tree/master/asciidoc-with-pleasure[source] / https://github.com/mojavelinux/decks/tree/gh-pages/write-in-asciidoc-publish-everywhere/mixit2015[generated HTML slides])
+* http://docs.jboss.org/cdi/learn/introduction/slides.html (https://github.com/antoinesd/Introduction-to-CDI[source])
+
+=== Slides rendering with reveal.js
+
+Again, as a not native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-reveal.js#revealjs-backend-for-asciidoctor. +
+Using *Bundler* proved to be a very convenient and efficient way to install the Asciidoctor / reveal.js stack for a projet.
+
+[WARNING]
+====
+. Step 4 of the install procedure, _"*Optional*: Copy or clone reveal.js presentation framework..."_, is *NOT* optional. +
+You have to retrieve the reveal.js presentation library to view your slides.
+. To use a *syntax highlighting*, you *have* to use the document attribute `:source-highlighter: highlightjs`. +
+See http://discuss.asciidoctor.org/Highlighting-source-code-for-reveal-js-backend-td2750.html
+====
+
+Once done, the render command is the following (using bundler):
+
+[source,asciidoctor]
+----
+bundle exec asciidoctor-revealjs </path/to/asciidoctor-document>
+----
+
+If you want to precise an *output directory* and a *specific filename*, you can use:
+
+[source,asciidoctor]
+----
+bundle exec asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
+----
+
+Examples of rendering:
+
+* http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
+* http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[My own example slides, based on the reveal.js doc] (https://github.com/Ardemius/asciidoctor-presentation/tree/master/asciidoctor-revealjs-slides[source])
+
+==== Keyboard shortcuts
+
+Several *keyboard shortcuts* are available in the browser while viewing reveal.js slides:
+
+[cols="1,3", options="header"]
+|===
+|Shortcut |Purpose
+
+|kbd:[Up], kbd:[Down], kbd:[Left], kbd:[Right]
+|Navigation
+
+|kbd:[f]
+|Full-screen
+
+|kbd:[s]
+|Show speaker notes interface (open a separate browser window)
+
+|kbd:[o]
+|Toggle overview
+
+|kbd:[b], kbd:[.]
+|Turn screen black
+
+|kbd:[Alt+click]
+|Zoom in and out
+|===
+
+=== Slides rendering with Deck.js
+
+Examples of rendering:
+
+* https://github.com/Ardemius/enhanced-jenkins_slides-asciidoctor-deckjs[my POC of Asciidoctor / Deck.js slides for Devoxx France *Enhanced Jenkins* talk]
+
+== Some resources
+
+* http://asciidoctor.org/[AsciiDoctor Official site]
+* http://www.methods.co.nz/asciidoc/index.html[AsciiDoc Official Site]
+* Excellent https://leanpub.com/awesomeasciidoctornotebook/read[Awesome AsciiDoctor Notebook] by https://leanpub.com/u/mrhaki[Hubert A. Klein Ikkink (mrhaki)]
+* My own tips! https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips

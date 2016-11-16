@@ -8,7 +8,7 @@ toc::[]
 
 == Overview
 
-The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc[asciidoctor-presentation.adoc] can be http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*viewed online here*], by using the *GitHub pages* of the project.
+The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.adoc[asciidoctor-revealjs-slides-example.adoc] can be http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*viewed online here*], by using the *GitHub pages* of the project.
 
 As https://github.com/hakimel/reveal.js[reveal.js] is present as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
 
@@ -38,7 +38,7 @@ For more info on how to retrieve the content of submodules, see:
 
 == Installation of Asciidoctor and its reveal.js backend
 
-Everything is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#installation-instructions[main doc of the repo]. +
+Everything is explained in the https://github.com/Ardemius/asciidoctor-presentation#installation-instructions[main doc of the repo]. +
 In my case, I choose to install http://jruby.org/[*JRuby*] and the https://github.com/asciidoctor/asciidoctor-reveal.js#ruby-setup[*Bundler* stack].
 
 === No-brainer JRuby / Bundler install
@@ -88,7 +88,7 @@ If you *already retrieved* the *reveal.js folder* (see the https://github.com/Ar
 
 == Generation of the slides
 
-Again, the whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-presentation.adoc#slides-rendering-with-revealjs[main doc of the repo]. +
+Again, the whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation#slides-rendering-with-revealjs[main doc of the repo]. +
 But, as a reminder, here is just the final command:
 
 [source,asciidoctor]

@@ -6,8 +6,14 @@
 // Despite the warning of the documentation, https://github.com/asciidoctor/asciidoctor-reveal.js, highlight.js syntax highlighting WORKS, BUT, you need to explicitly set the highlighter using the below attribute
 // see http://discuss.asciidoctor.org/Highlighting-source-code-for-reveal-js-backend-td2750.html
 :source-highlighter: highlightjs
+// revealjs attributes
+:revealjs_theme: white
+:revealjs_slideNumber: true
 
 // Basic presentation with speaker notes
+
+// First slide has a CSS customization of its title, using a Slide State (see https://github.com/asciidoctor/asciidoctor-reveal.js/tree/master#slide-state)
+[state=topic]
 == Slide One
 
 Some list using colors:
@@ -20,7 +26,7 @@ Be careful, styles loaded through `:customcss:` attribute will only be available
 
 == Slide Two
 
-Hello World - Good Bye Cruel World
+Hello World - Good Bye VERY Cruel World
 
 [NOTE.speaker]
 --
@@ -38,6 +44,8 @@ Is very yellow
 == Grand Announcement
 
 image::mountain-cover.jpg[background, size=cover]
+
+And here is some text!
 
 [%notitle]
 == The Great Goat
@@ -203,6 +211,10 @@ image::mountain-cover.jpg[Tiger,400,200,float="left",align="center"]
 
 And here is some text after the image
 
+== Slides using some admonition blocks
 
+TIP: Here is a TIP block with a *bold element* ! 
+
+And here is some `code text` !
 
 

@@ -1,7 +1,39 @@
 /**
  * Custom training CSS, to practise a bit the Reveal.js back-end of AsciiDoctor
+
+ <link href="http://fonts.googleapis.com/css?family=Neuton:400,700,800,400italic" rel="stylesheet">
+
  *
  */
+
+@import 'http://fonts.googleapis.com/css?family=Neuton:400,700,800,400italic';
+
+/* Use Google Neuton font for the text of all slides */
+.reveal {
+	font-family: 'Neuton', sans-serif;
+}
+
+/* Use Google Neuton font for the titles of all slides */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    font-family: 'Neuton', sans-serif;
+}
+
+/* if we want all slides to be left-aligned */
+/*.reveal p { 
+	text-align: left; 
+}*/
+
+/* Customization of the code elements on the model of DZSlides */
+.reveal section *:not(pre) > code {
+    font-family: Consolas, 'Liberation Mono', Courier, monospace;
+    color: #6D180B;
+    border: 1px solid #CCC;
+    background-color: #F2F2F2;
+    white-space: nowrap;
+    padding: 1px 3px 0;
+    font-size: 0.8em;
+    border-radius: 4px;
+}
 
 /* a class selector, to custom some given text using the syntax "[CYAN]#some text#" */
 .CYAN {
@@ -14,7 +46,21 @@
 
 .reveal strong,
 .reveal b {
-  color: #FF6A00; }
+ 	color: #BA3925; 
+ }
+
+/* To change the color of admonition block icons */
+.admonitionblock td.icon {
+  color: #BA3925;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Baloo+Bhai';
+
+/* CSS customization using tag "[state=topic]" on slides title */
+section[data-state="topic"] h2 {
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 3em;
+}
 
 .reveal section.title h1 {
     margin-top: 2.3em;
@@ -24,11 +70,4 @@
     margin-top: 15.3em;
     font-weight: bold;
     color: white;
-}
-
-@import 'https://fonts.googleapis.com/css?family=Baloo+Bhai';
-
-section[data-state="topic"] h2 {
-    font-family: 'Baloo Bhai', cursive;
-    font-size: 4em;
 }

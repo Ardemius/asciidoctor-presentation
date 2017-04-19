@@ -84,7 +84,7 @@ $ git clone -b 3.3.0 --depth 1 https://github.com/hakimel/reveal.js.git
 ====
 If you *already retrieved* the *reveal.js folder* (see the https://github.com/Ardemius/asciidoctor-presentation/tree/master/asciidoctor-revealjs-slides#asciidoctor--revealjs-slides-example[submodule details at the beginning of the document]), *bypass* this step.
 ====
-. That's it! emoji:ok_hand[2x]
+. That's it! :ok_hand:
 
 == Generation of the slides
 

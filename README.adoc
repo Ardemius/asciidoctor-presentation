@@ -70,7 +70,7 @@ Some examples: icon:tags[] icon:car[] icon:cloud-upload[] icon:heartbeat[] icon:
 
 == AsciiDoctor in GitHub
 
-GitHub *natively* supports AsciiDoctor, meaning you have *nothing* to install on your local desktop emoji:wink[2x]
+GitHub *natively* supports AsciiDoctor, meaning you have *nothing* to install on your local desktop :wink:
 
 Just a have a look at some `.adoc` in repos to get some examples, like `README.adoc` or some GitHub wikis. +
 As an example, here are some of mines:
@@ -120,7 +120,7 @@ image::Asciidoctor.js-live-preview_configuration.PNG[title="Do NOT forget the \"
 
 == AsciiDoctor and its backends: ONE TOOL TO RENDER THEM ALL!!!!
 
-Here comes the big part, the one where the magic happens emoji:triumph[2x]
+Here comes the big part, the one where the magic happens :triumph:
 
 === Installation instructions
 
@@ -247,6 +247,13 @@ Several *keyboard shortcuts* are available in the browser while viewing reveal.j
 Examples of rendering:
 
 * https://github.com/Ardemius/enhanced-jenkins_slides-asciidoctor-deckjs[my POC of Asciidoctor / Deck.js slides for Devoxx France *Enhanced Jenkins* talk]
+
+== Slides printing
+
+To print the slides, you first need to *convert them in PDF*. +
+To realize that easily, you can use the excellent https://github.com/melix/deck2pdf[deck2pdf] from Cédric CHAMPEAU.
+
+Once done, the printing itself can be done using you favorite PDF viewer.
 
 == Some resources
 

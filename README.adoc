@@ -18,7 +18,7 @@ endif::[]
 :sb: pass:[<br>]
 // check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
 :toc: macro
-//:toclevels: 3
+:toclevels: 4
 // To turn off figure caption labels and numbers
 //:figure-caption!:
 // Same for examples
@@ -168,40 +168,14 @@ In the directory that contains your .adoc document, just run:
 asciidoctor -b docbook mysample.adoc
 ----
 
-=== Slides rendering with DZSlides
-
-As DZSlides is not a native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
-
-The 2 main parts of additional backends are:
-
-* the *template directory*: required for the transformation of the .adoc into an HTML document
-* the *presentation library*: required for the rendering of the final HTML document
-
-Once done, the render command is the following:
-
-[source,asciidoctor]
-----
-asciidoctor -T </path/to/asciidoctor-backends> -E slim </path/to/asciidoctor-document>
-----
-
-[TIP]
-====
-To know what http://asciidoctor.org/docs/user-manual/#role[`role`] are available for DZSlides, have a look at: https://github.com/mojavelinux/dzslides/blob/master/themes/style/asciidoctor.css
-====
-
-Examples of rendering:
-
-* http://mojavelinux.github.io/decks/asciidoc-with-pleasure/rwx2012/index.html (https://github.com/mojavelinux/decks/tree/master/asciidoc-with-pleasure[source] / https://github.com/mojavelinux/decks/tree/gh-pages/write-in-asciidoc-publish-everywhere/mixit2015[generated HTML slides])
-* http://docs.jboss.org/cdi/learn/introduction/slides.html (https://github.com/antoinesd/Introduction-to-CDI[source])
-
-=== Slides rendering with reveal.js
+=== Slides rendering with *reveal.js* -> FAVORITE SLIDES SOLUTION 👍
 
 Again, as a not native backend, it requires a *complementary install*, which is described here:
 
 * https://github.com/asciidoctor/asciidoctor-reveal.js
 * https://asciidoctor.org/docs/asciidoctor-revealjs/
 
-==== Running a Asciidoctor Docker Container
+==== Running a *Asciidoctor Docker Container*
 
 Thanks to Docker, you now even don't need to install the Asciidoctor stack anymore, (nearly) everything is available in the Asciidoctor Docker image 😎
 
@@ -271,6 +245,32 @@ Several *keyboard shortcuts* are available in the browser while viewing reveal.j
 |kbd:[Alt+click]
 |Zoom in and out
 |===
+
+=== Slides rendering with DZSlides
+
+As DZSlides is not a native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-backends/tree/master/slim/dzslides#initial-setup
+
+The 2 main parts of additional backends are:
+
+* the *template directory*: required for the transformation of the .adoc into an HTML document
+* the *presentation library*: required for the rendering of the final HTML document
+
+Once done, the render command is the following:
+
+[source,asciidoctor]
+----
+asciidoctor -T </path/to/asciidoctor-backends> -E slim </path/to/asciidoctor-document>
+----
+
+[TIP]
+====
+To know what http://asciidoctor.org/docs/user-manual/#role[`role`] are available for DZSlides, have a look at: https://github.com/mojavelinux/dzslides/blob/master/themes/style/asciidoctor.css
+====
+
+Examples of rendering:
+
+* http://mojavelinux.github.io/decks/asciidoc-with-pleasure/rwx2012/index.html (https://github.com/mojavelinux/decks/tree/master/asciidoc-with-pleasure[source] / https://github.com/mojavelinux/decks/tree/gh-pages/write-in-asciidoc-publish-everywhere/mixit2015[generated HTML slides])
+* http://docs.jboss.org/cdi/learn/introduction/slides.html (https://github.com/antoinesd/Introduction-to-CDI[source])
 
 === Slides rendering with Deck.js
 

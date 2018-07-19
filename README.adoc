@@ -1,20 +1,31 @@
 = AsciiDoctor presentation
-By Thomas SCHWENDER
-:icons: font
-// check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
-:toc: macro
+Thomas SCHWENDER <https://github.com/ardemius[@ardemius]>
+// Handling GitHub admonition blocks icons
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
 :imagesdir: images
 :source-highlighter: highlightjs
-// to activate UI macros (such as displaying the keys of the keyboard)
-:experimental:
-// the following attributes are specific to the DZSlides backend
-:backend: dzslides
-:dzslides-style: stormy
-:dzslides-transition: fade
-:dzslides-fonts: family=Yanone+Kaffeesatz:400,700,200,300&family=Cedarville+Cursive
-:dzslides-highlight: monokai
+// Next 2 ones are to handle line breaks in some particular elements (list, footnotes, etc.)
+:lb: pass:[<br> +]
+:sb: pass:[<br>]
+// check https://github.com/Ardemius/personal-wiki/wiki/AsciiDoctor-tips for tips on table of content in GitHub
+:toc: macro
+//:toclevels: 3
+// To turn off figure caption labels and numbers
+//:figure-caption!:
+// Same for examples
+//:example-caption!:
+// To turn off ALL captions
+:caption:
 
-// No preamble, and so, no table of contents accepted in DZSlides. Put in comments the following lines if generating slides with this backend
 One document type to handle them all! (documents, blogs, slides, books, etc.)
 
 toc::[]
@@ -185,7 +196,26 @@ Examples of rendering:
 
 === Slides rendering with reveal.js
 
-Again, as a not native backend, it requires a *complementary install*, which is described here https://github.com/asciidoctor/asciidoctor-reveal.js#revealjs-backend-for-asciidoctor. +
+Again, as a not native backend, it requires a *complementary install*, which is described here:
+
+* https://github.com/asciidoctor/asciidoctor-reveal.js
+* https://asciidoctor.org/docs/asciidoctor-revealjs/
+
+==== Running a Asciidoctor Docker Container
+
+Thanks to Docker, you now even don't need to install the Asciidoctor stack anymore, (nearly) everything is available in the Asciidoctor Docker image 😎
+
+Its use is explained here : https://github.com/asciidoctor/docker-asciidoctor
+
+As can be seen, the reveal.js backend is installed in the image, and so you can use it by simply running in the container the following command:
+
+	asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
+
+==== Install with *Bundler*
+
+.Use Docker Asciidoctor instead!
+TIP: Since a *Docker Asciidoctor* is available, I find it the *best way* to run Asciidoctor
+
 Using *Bundler* proved to be a very convenient and efficient way to install the Asciidoctor / reveal.js stack for a projet.
 
 [WARNING]
@@ -210,7 +240,7 @@ If you want to precise an *output directory* and a *specific filename*, you can 
 bundle exec asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
 ----
 
-Examples of rendering:
+==== Examples of rendering
 
 * http://mojavelinux.github.io/decks/write-in-asciidoc-publish-everywhere/mixit2015/index.html (https://github.com/mojavelinux/write-in-asciidoc-publish-everywhere[source])
 * http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[My own example slides, based on the reveal.js doc] (https://github.com/Ardemius/asciidoctor-presentation/tree/master/asciidoctor-revealjs-slides[source])

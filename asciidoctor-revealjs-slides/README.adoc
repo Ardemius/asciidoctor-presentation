@@ -30,10 +30,11 @@ git submodule update --init --recursive
 
 [NOTE]
 ====
-For more info on how to retrieve the content of submodules, see:
+For more info on how to retrieve the content of submodules and update them, see:
 
 * http://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
 * http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag
+* https://stackoverflow.com/a/7504682/1809195[https://stackoverflow.com/questions/7500741/can-git-submodule-update-be-made-to-fetch-tags-in-submodules]
 ====
 
 == Installation of Asciidoctor and its reveal.js backend

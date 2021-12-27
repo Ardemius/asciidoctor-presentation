@@ -175,7 +175,7 @@ Again, as a not native backend, it requires a *complementary install*, which is 
 * https://github.com/asciidoctor/asciidoctor-reveal.js
 * https://asciidoctor.org/docs/asciidoctor-revealjs/
 
-==== Running a *Asciidoctor Docker Container*
+==== Running a *Asciidoctor Docker Container* -> EASIEST SOLUTION 👍
 
 Thanks to Docker, you now even don't need to install the Asciidoctor stack anymore, (nearly) everything is available in the Asciidoctor Docker image 😎
 
@@ -184,6 +184,15 @@ Its use is explained here : https://github.com/asciidoctor/docker-asciidoctor
 As can be seen, the reveal.js backend is installed in the image, and so you can use it by simply running in the container the following command:
 
 	asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
+
+.Beware of the compatibility !
+[WARNING]
+====
+Always beware of the *compatibility between the Asciidoctor reveal.js converter version AND the reveal.js version* !
+
+* The version of the Asciidoctor reveal.js converter embedded in the Docker image is given on its repo README file, https://github.com/asciidoctor/docker-asciidoctor.
+* The compatibility matrix between converter and reveal.js versions can be found in the converter documention : https://docs.asciidoctor.org/reveal.js-converter/latest/setup/compatibility-matrix/
+====
 
 ==== Install with *Bundler*
 

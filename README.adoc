@@ -179,7 +179,8 @@ Again, as a not native backend, it requires a *complementary install*, which is 
 
 Thanks to Docker, you now even don't need to install the Asciidoctor stack anymore, (nearly) everything is available in the Asciidoctor Docker image 😎
 
-Its use is explained here : https://github.com/asciidoctor/docker-asciidoctor
+Its use is explained here : https://github.com/asciidoctor/docker-asciidoctor +
+And it is as simple as `docker run -it -v <your directory>:/documents/ asciidoctor/docker-asciidoctor` to create the Asciidoctor container and run it 😉
 
 As can be seen, the reveal.js backend is installed in the image, and so you can use it by simply running in the container the following command:
 

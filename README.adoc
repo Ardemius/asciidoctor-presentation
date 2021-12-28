@@ -13,6 +13,8 @@ ifdef::env-github[]
 endif::[]
 :imagesdir: images
 :source-highlighter: highlightjs
+// We must enable experimental attribute to display Keyboard, button, and menu macros
+:experimental:
 // Next 2 ones are to handle line breaks in some particular elements (list, footnotes, etc.)
 :lb: pass:[<br> +]
 :sb: pass:[<br>]

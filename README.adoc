@@ -69,7 +69,7 @@ You will find everything you want in the 2 following resources:
 * http://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[the AsciiDoc Syntax Quick Reference]
 * http://asciidoctor.org/docs/user-manual/[the User Manual]
 
-Those 2 resouces are really *awesomely well done*, do not hesite to abuse it!
+Those 2 resources are really *awesomely well done*, do not hesite to abuse it!
 
 Here is just a small example of the syntax:
 
@@ -138,10 +138,13 @@ Here comes the big part, the one where the magic happens :triumph:
 === Installation instructions
 
 From this point, you will have to *install AsciiDoctor and its backends* on your local desktop. +
-First, to install AsciiDoctor, just follow those instructions at this page: http://asciidoctor.org/docs/install-toolchain/
+First, to install AsciiDoctor, just follow those instructions at this page: https://docs.asciidoctor.org/asciidoctor/latest/install/#installation-methods
 
 [NOTE]
 ====
+*EASIEST WAY* : Just use the *Docker image*, as explained a bit below 😉
+
+*OLD WAY* : +
 I became a big fan of http://jruby.org/[JRuby] as the Ruby implementation to use with Asciidoctor. +
 Easy to install, and to switch from a version to another (just by updating environment variables). +
 Just do not forget to use a 1.7.x JRuby version (02/11/2016)

@@ -10,7 +10,9 @@ toc::[]
 
 The slides corresponding to the document https://github.com/Ardemius/asciidoctor-presentation/blob/master/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.adoc[asciidoctor-revealjs-slides-example.adoc] can be http://ardemius.github.io/asciidoctor-presentation/asciidoctor-revealjs-slides/asciidoctor-revealjs-slides-example.html[*viewed online here*], by using the *GitHub pages* of the project.
 
-As https://github.com/hakimel/reveal.js[reveal.js] is present as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
+=== Handling reveal.js as a git submodule
+
+As https://github.com/hakimel/reveal.js[reveal.js] is defined as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
 
 * either to use the `--recursive` option of the `clone` command: +
 ----
@@ -30,19 +32,36 @@ git submodule update --init --recursive
 
 [NOTE]
 ====
-For more info on how to retrieve the content of submodules and update them, see:
-
-* http://stackoverflow.com/questions/3796927/how-to-git-clone-including-submodules
-* http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag
-* https://stackoverflow.com/a/7504682/1809195[https://stackoverflow.com/questions/7500741/can-git-submodule-update-be-made-to-fetch-tags-in-submodules]
+For more info on *how to handle Git submodules* (retrieve content, update, delete), see this excellent article from Delicious Insights : +
+https://delicious-insights.com/fr/articles/git-submodules/
 ====
+
+=== Update reveal.js content to a newer version
+
+In case you create your own presentation with a repo containing a reveal.js submodule, you will sometimes need to update the content of the reveal.js folder to a more recent version. +
+In that case, here are the commands to use : 
+
+[source, bash]
+----
+cd <path to reveal.js folder>
+git fetch
+git checkout -q <commit-sha1, tag name or branch name>
+cd <path to your repo main folder>
+git commit -am "moved submodule from x.y.z to a.b.c"
+----
 
 == Installation of Asciidoctor and its reveal.js backend
 
 Everything is explained in the https://github.com/Ardemius/asciidoctor-presentation#installation-instructions[main doc of the repo]. +
-In my case, I choose to install http://jruby.org/[*JRuby*] and the https://github.com/asciidoctor/asciidoctor-reveal.js#ruby-setup[*Bundler* stack].
+Right now (2021), my preferred way to run Asciidoctor with reveal.js is to use their *Docker image*, as explained https://github.com/Ardemius/asciidoctor-presentation/blob/master/README.adoc#running-a-asciidoctor-docker-container--easiest-solution-[here].
 
-=== No-brainer JRuby / Bundler install
+=== Use Asciidoctor Docker container
+
+As mentioned just above, everything is explained in this repo, https://github.com/Ardemius/asciidoctor-presentation/blob/master/README.adoc#running-a-asciidoctor-docker-container--easiest-solution-[here]
+
+=== OLD WAY : No-brainer JRuby / Bundler install
+
+Detailed information about Asciidoctor and reveal.js installation with JRuby and Bundler can be found on http://jruby.org/[*JRuby site*] and on the https://docs.asciidoctor.org/reveal.js-converter/latest/setup/ruby-setup/[Reveal.js converter for Asciidoctor documentation].
 
 Just as a convenience, here is a no-brainer install procedure for *Asciidoctor* / *reveal.js* backend using *JRuby* and *Bundler* :
 
@@ -89,10 +108,11 @@ If you *already retrieved* the *reveal.js folder* (see the https://github.com/Ar
 
 == Generation of the slides
 
-Again, the whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation#slides-rendering-with-revealjs[main doc of the repo]. +
-But, as a reminder, here is just the final command:
+Again, the whole process is explained in the https://github.com/Ardemius/asciidoctor-presentation#slides-rendering-with-revealjs[main doc of the repo].
 
-[source,asciidoctor]
+But, as a reminder, here is the command to execute in your Docker running container:
+
+[source,bash]
 ----
-bundle exec asciidoctor-revealjs </path/to/asciidoctor-document>
+asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
 ----

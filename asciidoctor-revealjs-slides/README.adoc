@@ -38,16 +38,33 @@ https://delicious-insights.com/fr/articles/git-submodules/
 
 === Update reveal.js content to a newer version
 
-In case you create your own presentation with a repo containing a reveal.js submodule, you will sometimes need to update the content of the reveal.js folder to a more recent version. +
-In that case, here are the commands to use : 
+In case you create your own presentation with a repo containing a reveal.js submodule, you will sometimes need to update the content of the reveal.js folder to a more recent version.
+
+If you are *the one that needs to update the submodule content in the first place*, and then share the changes with others, here are the commands to use : 
 
 [source, bash]
 ----
+# go to submodule folder 
 cd <path to reveal.js folder>
+# fetch all distant changes
 git fetch
+# checkout in submodule working directory the content you need (like the branch you need)
 git checkout -q <commit-sha1, tag name or branch name>
+# then go back to superproject and commit in it your changes to the submodule 
 cd <path to your repo main folder>
 git commit -am "moved submodule from x.y.z to a.b.c"
+----
+
+If you need to *retrieve in an already existing repo a change done to one of its submodule* : 
+
+[source, bash]
+----
+# first retrieve all changes from the superproject, including the ones targeting .gitmodules file
+git pull
+# then use "git submodule sync" command to update the configuration of your submodule
+git submodule sync --recursive
+# and finally, now its configuration is correct, update the content of your submodule itself
+git submodule update --init --recursive
 ----
 
 == Installation of Asciidoctor and its reveal.js backend

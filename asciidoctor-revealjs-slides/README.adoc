@@ -12,7 +12,7 @@ The slides corresponding to the document https://github.com/Ardemius/asciidoctor
 
 === Handling reveal.js as a git submodule
 
-As https://github.com/hakimel/reveal.js[reveal.js] is defined as a *submodule* in the subfolder `asciidoctor-revealjs-slides`, to *retrieve its content*, you need:
+As https://github.com/hakimel/reveal.js[reveal.js] is defined as a *submodule* in the subfolder `reveal.js`, to *retrieve its content*, you need:
 
 * either to use the `--recursive` option of the `clone` command: +
 ----
@@ -66,6 +66,51 @@ git submodule sync --recursive
 # and finally, now its configuration is correct, update the content of your submodule itself
 git submodule update --init --recursive
 ----
+
+=== Create a project with reveal.js as a git submodule
+
+For your information, if you want to *create a project with reveal.js as a submodule*, here is how I did it for this repo : 
+
+1. In the root folder of your repo (at the same level as _".git"_ folder), *declare the submodule* like that : 
+
+    git submodule add https://github.com/hakimel/reveal.js.git docs/reveal.js
++
+[NOTE]
+====
+If you look at the `git submodule add` doc, you see that a branch argument exists (`-b`). +
+This argument can *ONLY* be a branch, not a tag and not a sha1. +
+Meaning you can't use it if a branch doesn't exist for the commit you need, which is the case for reveal.js, which essentially uses tags for its versions.
+====
+
+2. Then go the new _"docs/reveals.js"_ folder, you will notice it has a _".git"_ meaning it's a submodule. +
+This file contains a single line, referencing the "true" git directory of your submodule : 
+
+    gitdir: ../../.git/modules/docs/reveal.js
++
+If you `git log` in this folder, the commit log of the *targeted* repo will be displayed.
+
+3. You now have to *retrieve the right branch, tag or commit* as given by the https://docs.asciidoctor.org/reveal.js-converter/latest/setup/compatibility-matrix/[compatibility matrix between Asciidoctor reveal.js converter and reveal.js versions] +
+As of today (2022/01), for a version *4.x* of the Asciidoctor / reveal.js converter, you need a version *3.9* of reveal.js. +
+To do so, you just have to checkout the right commit. +
+In the current case, the sha1 of the commit associated with reveal.js 3.9.2 is `94d98ff7d89e35c7d5b289ba387cdb0d42b30793`, (it can be seen from reveal.js GitHub repo, https://github.com/hakimel/reveal.js/releases/tag/3.9.2), so the command is : 
+
+    git checkout 94d98ff7d89e35c7d5b289ba387cdb0d42b30793
++
+[NOTE]
+====
+You can also *checkout a tag* if available : 
+
+    git fetch --tags
+    git checkout tags/3.9.2
+====
+
+4. Finally, go back to the root folder of your main repo, and *commit all changes in your MAIN repo* : 
+
+    cd ../..
+    git add .
+    git commit -m "create submodule for reveal.js"
+
+That's it, your submodule is now fully effective 🙂 
 
 == Installation of Asciidoctor and its reveal.js backend
 

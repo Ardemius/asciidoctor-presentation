@@ -197,7 +197,7 @@ As can be seen, the reveal.js backend is installed in the image, and so you can 
 Always beware of the *compatibility between the Asciidoctor reveal.js converter version AND the reveal.js version* !
 
 * The version of the Asciidoctor reveal.js converter embedded in the Docker image is given on its repo README file, https://github.com/asciidoctor/docker-asciidoctor.
-* The compatibility matrix between converter and reveal.js versions can be found in the converter documention : https://docs.asciidoctor.org/reveal.js-converter/latest/setup/compatibility-matrix/
+* The compatibility matrix between converter and reveal.js versions can be found in the converter documentation : https://docs.asciidoctor.org/reveal.js-converter/latest/setup/compatibility-matrix/
 ====
 
 ==== Install with *Bundler*

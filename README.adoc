@@ -187,6 +187,12 @@ Thanks to Docker, you now even don't need to install the Asciidoctor stack anymo
 Its use is explained here : https://github.com/asciidoctor/docker-asciidoctor +
 And it is as simple as `docker run -it -v <your directory>:/documents/ asciidoctor/docker-asciidoctor` to create the Asciidoctor container and run it 😉
 
+[NOTE]
+====
+In the previous command, the path to <your directory> must be formatted depending on your OS. +
+Here is an example for Windows : `docker run -it -v D:\work\my-folder-with-the-adoc-file:/documents/ asciidoctor/docker-asciidoctor`
+====
+
 As can be seen, the reveal.js backend is installed in the image, and so you can use it by simply running in the container the following command:
 
 	asciidoctor-revealjs </path/to/asciidoctor-document> -D </path/to/output-dir> -o <generated-filename>
